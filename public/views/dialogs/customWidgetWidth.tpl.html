@@ -1,0 +1,17 @@
+<script type="text/ng-template" id="customWidth">
+ <div class="panel-primary">
+ 	<div class="modal-header panel-heading">
+		<h4 class="modal-title">{{modalTitle}}
+		 	<button ng-click="closeModal()" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		 </h4>
+  </div>
+  <div class="modal-body">
+
+    <div class="input-group">
+      <input type="text" class="form-control customWidgetStyle" name="setTitle" ng-show="showTitle(widthConfig.calledFor)" ng-model="widthConfig.setTitle" value="widthConfig.setTitle" placeholder="Widget Title">
+      <input type="text" class="form-control customWidgetStyle" name="setWidth" ng-show="showWidth(widthConfig.calledFor)" ng-model="widthConfig.setWidth" value="widthConfig.setWidth" placeholder="Widget Width">
+      <button class="btn btn-success modal-btn" type="button" ng-click="setWidgetWidth(widthConfig.setWidth, widthConfig.setTitle, widthConfig.calledFor)">Save</button>
+
+    </div>
+  </div>
+</script>
